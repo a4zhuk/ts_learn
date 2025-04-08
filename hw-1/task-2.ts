@@ -13,13 +13,12 @@ function validatePassword(password: string) {
   let lowerCase = false
   let upperCase = false
   let number = false
+  password = password.trim()
   if (!password.length){
     return false
   }else if (password.length < 8){
     return false
-  }else if (password.includes(' ')){
-    return false
-  }
+  };
 
 for (let el of password){
   if (el >= 'a' && el <= 'z'){
@@ -30,7 +29,7 @@ for (let el of password){
     number = true
   } else return false
 }
-return upperCase === true && lowerCase === true && number === true ? true : false
+return upperCase && lowerCase && number
 }
 
-console.log(validatePassword("qwe1adsaWE"))
+console.log(validatePassword(" qwe1adsaWE"))
