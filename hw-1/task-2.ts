@@ -10,26 +10,26 @@
 */
 
 function validatePassword(password: string) {
-  let lowerCase = false
-  let upperCase = false
-  let number = false
-  password = password.trim()
+  let lowerCase = false;
+  let upperCase = false;
+  let number = false;
+  password = password.trim();
   if (!password.length){
-    return false
+    return false;
   }else if (password.length < 8){
-    return false
+    return false;
   };
 
 for (let el of password){
   if (el >= 'a' && el <= 'z'){
-    lowerCase = true
+    lowerCase = true;
   } else if (el >= 'A' && el <= 'Z'){
-    upperCase = true
+    upperCase = true;
   } else if (el >= '0' && el <= '9'){
-    number = true
-  } else return false
+    number = true;
+  };
 }
-return upperCase && lowerCase && number
+return upperCase && lowerCase && number;
 }
 
-console.log(validatePassword(" qwe1adsaWE"))
+console.log(validatePassword(" qwe1adsaWE"));
