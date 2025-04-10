@@ -34,7 +34,7 @@ type Grade = 'junior' | 'middle' | 'senior';
     - model (строка),
     - опциональное поле year (число).
 */
-interface Car {
+interface ICar {
     brand: string;
     model: string;
     year?: number;
