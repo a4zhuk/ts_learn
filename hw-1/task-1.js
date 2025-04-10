@@ -11,9 +11,9 @@
 let num1 = 42;
 let str = 'Hello, TypeScript!';
 let isComplete = true;
-let numbers = [1, 2, 3, 4, 5];
-let cities = ["Minsk", "Warsaw", "London"];
-let person = {
+const numbers = [1, 2, 3, 4, 5];
+const cities = ["Minsk", "Warsaw", "London"];
+const person = {
     name: 'Alice',
     age: 30,
     city: 'Minsk',
