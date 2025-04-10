@@ -17,10 +17,6 @@ function customMap(arr, callback) {
 }
 const arr = [1, 2, 3, 4, 5, 6];
 const arr2 = customMap(arr, (el, index) => {
-    if (typeof el !== "number") {
-        throw new Error(`${el} is not a number`);
-    }
-    else
-        return el * index;
+    return el * index;
 });
 console.log(arr2);

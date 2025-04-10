@@ -8,18 +8,16 @@
    map([1,2,3,4,5], callback) => [0,2,6,12,20]
 */
 
-function customMap<T>(arr: T[], callback:(el: T, index: number, arr: T[]) => T): T[]{
-   const newArr = [];
+function customMap<T, U>(arr: T[], callback:(el: T, index: number, arr: T[]) => U): U[]{
+   const newArr:U[] = [];
    for(let i = 0; i < arr.length; i++){
       newArr.push(callback(arr[i], i, arr))
    }
 return newArr
 }
 
-const arr = [1,2,3,4,5,6]
-const arr2 = customMap(arr, (el, index) => {
-   if (typeof el !=="number"){
-      throw new Error (`${el} is not a number`)
-   } else return el * index
+const arr:number[] = [1,2,3,4,5,6]
+const arr2 = customMap<number,  number>(arr, (el, index) => {
+   return el * index
 })
 console.log(arr2)
